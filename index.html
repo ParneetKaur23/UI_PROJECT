@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body class="body_style">
+    <div class="web_div">
+        <div class="left_div">
+            <div class="clock">
+                <img src="./Watch.png" alt="">
+                <h3>CLOCK</h3>
+            </div>
+            <div class="time">
+                <img class="small_icons" src="./sun.jpeg" alt="">
+                <p>Set wake up time</p>
+                <select name="time_value" class="select_style">
+                    <option value="8_9AM">8AM-9AM</option>
+                    <option value="9_10AM">9AM-10AM</option>
+                    <option value="10_11AM">10AM-11AM</option>
+                    <option value="11_12AM">11AM-12AM</option>
+                </select>
+
+                <img class="small_icons" src="./spoon.jpeg" alt="">
+                <p class="lunch_style">Set lunch time </p>
+                <select name="time_value" class="select_style">
+                    <option value="8_9AM">8AM-9AM</option>
+                    <option value="9_10AM">9AM-10AM</option>
+                    <option value="10_11AM">10AM-11AM</option>
+                    <option value="11_12AM">11AM-12AM</option>
+                </select>
+
+
+                <img class="small_icons" src="./nap.jpeg" alt="">
+                <p class="sleep_style">Set nap time </p>
+                <select name="time_value" class="select_style">
+                    <option value="8_9AM">8AM-9AM</option>
+                    <option value="9_10AM">9AM-10AM</option>
+                    <option value="10_11AM">10AM-11AM</option>
+                    <option value="11_12AM">11AM-12AM</option>
+                </select>
+
+            </div>
+            <div class="afternoon_style">
+                <h4 style="margin-left:15px;margin-top:20px;font-size: x-large;">GOOD AFTERNOON !!</h4>
+            </div>
+
+            <div class="party_style">
+                <p class="p_party_style">Party time !</p>
+            </div>
+        </div>
+        <div class="right_div">
+            <div class="exact_time">
+                <p class="p_exact_time">TIME</p>
+                <div class="small_time_div_first time-hour" >t</div>
+                <p class="p_exact_time">:</p>
+                <div class="small_time_div time-min">t</div>
+                <p class="p_exact_time">:</p>
+                <div class="small_time_div time-sec" >t</div>
+                <div class="small_time_div_am_pm" id="am-time">t</div>
+             </div>
+            <div class="trans_box_1"></div>
+            <div class="trans_box_2"></div>
+            <div class="lunch_image_style">
+                <img src="./Lunch.jpeg" class="img_style" alt="">
+                <div class="top-left">LET'S HAVE SOME LUNCH !!</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        const hourTime = document.querySelector('.time-hour');
+        const minTime = document.querySelector('.time-min');
+        const secTime = document.querySelector('.time-sec');
+        const amPm = document.querySelector('#am-time');
+
+        function addZero(timeFrame) {
+            return timeFrame < 10 ? '0'.concat(timeFrame) : timeFrame;
+        }
+        function time() {
+            var d = new Date();
+            var sec = d.getSeconds();
+            var min = d.getMinutes();
+            var hr = d.getHours();
+
+            hourTime.innerHTML = `${addZero((hr % 12) || 12)}  Hours`;
+            minTime.innerHTML = `${addZero(min)} Mins`;
+            secTime.innerHTML = `${addZero(sec)} Secs`;
+            amPm.innerHTML = `${hr >= 12 ? 'PM' : 'AM'} `;
+        }
+        setInterval(time, 1000);
+    </script>
+
+
+
+</body>
+
+</html>
