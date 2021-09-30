@@ -10,6 +10,7 @@
     height: 100%;
     flex-direction: column;
 }
+
 .web_div {
     width : 50%;
     display: flex;
@@ -234,7 +235,7 @@ p{
     width:140px;
     padding:4px;
 }
-@media screen and (min-width:359px) and (max-width:1025px) { 
+@media screen and (min-width:768px) and (max-width:1025px) { 
     .clock{
         width:270px;
         margin-left: 5px;
@@ -350,6 +351,7 @@ p{
         border-radius: 3px;
         margin-left: 200px;
         position: relative;
+        
     }
     .img_style {
         width:280px;
@@ -357,6 +359,7 @@ p{
         margin-left: 0px;
         border-radius: 3px;
         margin-top:50px;
+        border:5px solid black;
     }   
     .top-left {
         position: absolute;

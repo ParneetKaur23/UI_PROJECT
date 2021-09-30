@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="./index.css">
 </head>
-
 <body class="body_style">
     <div class="web_div">
         <div class="left_div">
@@ -19,39 +17,102 @@
             <div class="time">
                 <img class="small_icons" src="./sun.jpeg" alt="">
                 <p>Set wake up time</p>
-                <select name="time_value" class="select_style">
-                    <option value="8_9AM">8AM-9AM</option>
-                    <option value="9_10AM">9AM-10AM</option>
-                    <option value="10_11AM">10AM-11AM</option>
-                    <option value="11_12AM">11AM-12AM</option>
-                </select>
+                <select name="time_value_wake" class="select_style" id="wake" onchange="fn_wake()">
+                    <option value="Default">Default</option>
+                    <option value="12AM-1AM">12AM-1AM</option>
+                    <option value="01AM-02AM">01AM-02AM</option>
+                    <option value="02AM-03AM">02AM-03AM</option>
+                    <option value="03AM-04AM">03AM-04AM</option>
+                    <option value="04AM-05AM">04AM-05AM</option>
+                    <option value="05AM-06AM">05AM-06AM</option>
+                    <option value="06AM-07AM">06AM-07AM</option>
+                    <option value="07AM-08AM">07AM-08AM</option>
+                    <option value="08AM-09AM">08AM-09AM</option>
+                    <option value="09AM-10AM">09AM-10AM</option>
+                    <option value="10AM-11AM">10AM-11AM</option>
+                    <option value="11AM-12PM">11AM-12PM</option>
+                    <option value="12PM-1PM">12PM-1PM</option>
+                    <option value="01PM-02PM">01PM-02PM</option>
+                    <option value="02PM-03PM">02PM-03PM</option>
+                    <option value="03PM-04PM">03PM-04PM</option>
+                    <option value="04PM-05PM">04PM-05PM</option>
+                    <option value="05PM-06PM">05PM-06PM</option>
+                    <option value="06PM-07PM">06PM-07PM</option>
+                    <option value="07PM-08PM">07PM-08PM</option>
+                    <option value="08PM-09PM">08PM-09PM</option>
+                    <option value="09PM-10PM">09PM-10PM</option>
+                    <option value="10PM-11PM">10PM-11PM</option>
+                    <option value="11PM-12AM">11PM-12AM</option>
+                 </select>
 
                 <img class="small_icons" src="./spoon.jpeg" alt="">
                 <p class="lunch_style">Set lunch time </p>
-                <select name="time_value" class="select_style">
-                    <option value="8_9AM">8AM-9AM</option>
-                    <option value="9_10AM">9AM-10AM</option>
-                    <option value="10_11AM">10AM-11AM</option>
-                    <option value="11_12AM">11AM-12AM</option>
+                <select name="time_value_lunch" class="select_style" id="lunch" onchange="fn_lunch()">
+                    <option value="Default">Default</option>
+                    <option value="12AM-1AM">12AM-1AM</option>
+                    <option value="01AM-02AM">01AM-02AM</option>
+                    <option value="02AM-03AM">02AM-03AM</option>
+                    <option value="03AM-04AM">03AM-04AM</option>
+                    <option value="04AM-05AM">04AM-05AM</option>
+                    <option value="05AM-06AM">05AM-06AM</option>
+                    <option value="06AM-07AM">06AM-07AM</option>
+                    <option value="07AM-08AM">07AM-08AM</option>
+                    <option value="08AM-09AM">08AM-09AM</option>
+                    <option value="09AM-10AM">09AM-10AM</option>
+                    <option value="10AM-11AM">10AM-11AM</option>
+                    <option value="11AM-12PM">11AM-12PM</option>
+                    <option value="12PM-1PM">12PM-1PM</option>
+                    <option value="01PM-02PM">01PM-02PM</option>
+                    <option value="02PM-03PM">02PM-03PM</option>
+                    <option value="03PM-04PM">03PM-04PM</option>
+                    <option value="04PM-05PM">04PM-05PM</option>
+                    <option value="05PM-06PM">05PM-06PM</option>
+                    <option value="06PM-07PM">06PM-07PM</option>
+                    <option value="07PM-08PM">07PM-08PM</option>
+                    <option value="08PM-09PM">08PM-09PM</option>
+                    <option value="09PM-10PM">09PM-10PM</option>
+                    <option value="10PM-11PM">10PM-11PM</option>
+                    <option value="11PM-12AM">11PM-12AM</option>
                 </select>
 
 
                 <img class="small_icons" src="./nap.jpeg" alt="">
                 <p class="sleep_style">Set nap time </p>
-                <select name="time_value" class="select_style">
-                    <option value="8_9AM">8AM-9AM</option>
-                    <option value="9_10AM">9AM-10AM</option>
-                    <option value="10_11AM">10AM-11AM</option>
-                    <option value="11_12AM">11AM-12AM</option>
+                <select name="time_value_dinner" class="select_style" id="dinner" onchange="fn_dinner()">
+                    <option value="Default">Default</option>
+                    <option value="12AM-1AM">12AM-1AM</option>
+                    <option value="01AM-02AM">01AM-02AM</option>
+                    <option value="02AM-03AM">02AM-03AM</option>
+                    <option value="03AM-04AM">03AM-04AM</option>
+                    <option value="04AM-05AM">04AM-05AM</option>
+                    <option value="05AM-06AM">05AM-06AM</option>
+                    <option value="06AM-07AM">06AM-07AM</option>
+                    <option value="07AM-08AM">07AM-08AM</option>
+                    <option value="08AM-09AM">08AM-09AM</option>
+                    <option value="09AM-10AM">09AM-10AM</option>
+                    <option value="10AM-11AM">10AM-11AM</option>
+                    <option value="11AM-12PM">11AM-12PM</option>
+                    <option value="12PM-1PM">12PM-1PM</option>
+                    <option value="01PM-02PM">01PM-02PM</option>
+                    <option value="02PM-03PM">02PM-03PM</option>
+                    <option value="03PM-04PM">03PM-04PM</option>
+                    <option value="04PM-05PM">04PM-05PM</option>
+                    <option value="05PM-06PM">05PM-06PM</option>
+                    <option value="06PM-07PM">06PM-07PM</option>
+                    <option value="07PM-08PM">07PM-08PM</option>
+                    <option value="08PM-09PM">08PM-09PM</option>
+                    <option value="09PM-10PM">09PM-10PM</option>
+                    <option value="10PM-11PM">10PM-11PM</option>
+                    <option value="11PM-12AM">11PM-12AM</option>
                 </select>
 
             </div>
-            <div class="afternoon_style">
+            <div class="afternoon_style" id="wish">
                 <h4 style="margin-left:15px;margin-top:20px;font-size: x-large;">GOOD AFTERNOON !!</h4>
             </div>
 
-            <div class="party_style">
-                <p class="p_party_style">Party time !</p>
+            <div class="party_style" id="dinner">
+                <p class="p_party_style" id="party_value">Party time !</p>
             </div>
         </div>
         <div class="right_div">
@@ -67,15 +128,11 @@
             <div class="trans_box_1"></div>
             <div class="trans_box_2"></div>
             <div class="lunch_image_style">
-                <img src="./Lunch.jpeg" class="img_style" alt="">
-                <div class="top-left">LET'S HAVE SOME LUNCH !!</div>
+                <img id="image_change" src="./regular.png" class="img_style" alt="">
+                <div class="top-left" id="top_wish"><h4>Welcome !!</h4></div>
             </div>
         </div>
     </div>
-
-
-
-
     <script>
         const hourTime = document.querySelector('.time-hour');
         const minTime = document.querySelector('.time-min');
@@ -90,17 +147,90 @@
             var sec = d.getSeconds();
             var min = d.getMinutes();
             var hr = d.getHours();
-
             hourTime.innerHTML = `${addZero((hr % 12) || 12)}  Hours`;
             minTime.innerHTML = `${addZero(min)} Mins`;
             secTime.innerHTML = `${addZero(sec)} Secs`;
             amPm.innerHTML = `${hr >= 12 ? 'PM' : 'AM'} `;
         }
         setInterval(time, 1000);
+        function fn_wake() {
+            var selectedStand = document.getElementById("wake").value;
+            var image = document.getElementById("image_change");
+            var wish_value = document.getElementById("wish");
+            var top_wish_value = document.getElementById("top_wish");
+            var time=selectedStand[0];
+            time += selectedStand[1];
+            var hourtime_01 = hourTime.innerHTML;
+            var hourtime_02 = hourtime_01[0];
+            hourtime_02 += hourtime_01[1];
+            var late_time=selectedStand[5];
+            late_time += selectedStand[6];
+            var time_am_pm2 = selectedStand[2];
+            time_am_pm2 += selectedStand[3];
+            if (time<=hourtime_02 && late_time>hourtime_02 && amPm.innerText == time_am_pm2) {
+               image.src = "./Breakfast.jpeg";
+               wish_value.innerHTML = "<h3>Eat breakfast like a king!!!!</h3>"
+               top_wish_value.innerHTML = "<h4>Good Morning!!<h4>"
+            } 
+        }
+        document.getElementById("party_value").addEventListener("click", fn_party);
+        function fn_party() {
+               var image = document.getElementById("image_change");
+               image.src = "./Party.jpg";
+               var wish_value = document.getElementById("wish");
+               wish_value.innerHTML = "<h3>Enjoy the Party!!!!</h3>" 
+               var top_wish_value = document.getElementById("top_wish");
+               top_wish_value.innerHTML = "<h4>Party Time</h4>"
+               var party_value =  document.getElementById("party_value");
+               party_value.innerHTML = "End Party!!";
+               party_value.addEventListener("click", fn_end);
+               function fn_end() {
+               party_value.removeEventListener("click", fn_party);
+        } 
+        }
+        
+        function fn_lunch() {
+            var selectedStand = document.getElementById("lunch").value;
+            var image = document.getElementById("image_change");
+            var wish_value = document.getElementById("wish");
+            var top_wish_value = document.getElementById("top_wish");
+            var time=selectedStand[0];
+            time += selectedStand[1];
+            var hourtime_01 = hourTime.innerHTML;
+            var hourtime_02 = hourtime_01[0];
+            hourtime_02 += hourtime_01[1];
+            var late_time=selectedStand[5];
+            late_time += selectedStand[6];
+            var time_am_pm2 = selectedStand[2];
+            time_am_pm2 += selectedStand[3];
+            if (time<=hourtime_02 && late_time>hourtime_02 && amPm.innerText == time_am_pm2) {
+               image.src = "./Lunch.jpeg";
+               wish_value.innerHTML = "<h3>Eat lunch like a commoner!!!!</h3>"
+               top_wish_value.innerHTML = "<h4>Good Afternoon!!<h4>"
+            } 
+        }
+
+        function fn_dinner() {
+            var selectedStand = document.getElementById("dinner").value;
+            var image = document.getElementById("image_change");
+            var wish_value = document.getElementById("wish");
+            var top_wish_value = document.getElementById("top_wish");
+            var time=selectedStand[0];
+            time += selectedStand[1];
+            var hourtime_01 = hourTime.innerHTML;
+            var hourtime_02 = hourtime_01[0];
+            hourtime_02 += hourtime_01[1];
+            var late_time=selectedStand[5];
+            late_time += selectedStand[6];
+            var time_am_pm2 = selectedStand[2];
+            time_am_pm2 += selectedStand[3];
+            if (time<=hourtime_02 && late_time>hourtime_02 && amPm.innerText == time_am_pm2) {
+               image.src = "./Dinner.jpeg";
+               wish_value.innerHTML = "<h3>Eat dinner like a beggar!!!!</h3>"
+               top_wish_value.innerHTML = "<h4>Good Night!!<h4>"
+            } 
+        }
+
     </script>
-
-
-
 </body>
-
 </html>
