@@ -111,9 +111,9 @@
                 <h4 style="margin-left:15px;margin-top:20px;font-size: x-large;">GOOD AFTERNOON !!</h4>
             </div>
 
-            <div class="party_style" id="dinner">
-                <p class="p_party_style" id="party_value">Party time !</p>
-            </div>
+            
+            <button type="submit" class="party_style p_party_style" id="party_value" onclick="fn_party()">Party time !</button>
+            
         </div>
         <div class="right_div">
             <div class="exact_time">
@@ -173,20 +173,27 @@
                top_wish_value.innerHTML = "<h4>Good Morning!!<h4>"
             } 
         }
-        document.getElementById("party_value").addEventListener("click", fn_party);
         function fn_party() {
+               var flag=0;
                var image = document.getElementById("image_change");
-               image.src = "./Party.jpg";
                var wish_value = document.getElementById("wish");
-               wish_value.innerHTML = "<h3>Enjoy the Party!!!!</h3>" 
                var top_wish_value = document.getElementById("top_wish");
-               top_wish_value.innerHTML = "<h4>Party Time</h4>"
                var party_value =  document.getElementById("party_value");
-               party_value.innerHTML = "End Party!!";
-               party_value.addEventListener("click", fn_end);
-               function fn_end() {
-               party_value.removeEventListener("click", fn_party);
-        } 
+               if(party_value.innerText === "Party time !"){
+                top_wish_value.innerHTML = "<h4>Party Time</h4>";
+                image.src = "./Party.jpg";
+                wish_value.innerHTML = "<h3>Enjoy the Party!!!!</h3>";
+                party_value.innerHTML = "<h4>End Party!!</h4>";
+                party_value.addEventListener("dblclick", bar);
+               }
+               setInterval(bar, 5000)
+               function bar(){
+                console.log("World");
+                top_wish_value.innerHTML = "<h4>Welcome!!!</h4>";
+                image.src = "./regular.png";
+                wish_value.innerHTML = "<h3>Welcome back!!!!</h3>" 
+               }
+               
         }
         
         function fn_lunch() {

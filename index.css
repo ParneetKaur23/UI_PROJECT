@@ -198,8 +198,8 @@ p{
    background-image: linear-gradient(to right, purple, blue);
 }
 .p_party_style{
-  color:white;
-  margin-left: 40px;
+    background-image: linear-gradient(to right, blue, purple);
+  margin-left: 80px;
   margin-top:10px;
 }
 .lunch_style {
